@@ -1,0 +1,108 @@
+body {
+  font-family:sans-serif;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%2337ffb8' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23e75cff' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%233eff55' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ff4acf' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2392ff45' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23ff3778' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23f5ff4d' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ff3825' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23ffae54' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23ff8812' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23ff5b5b' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23ffe800' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+:root {
+  --green:#37ffb8;
+  --red:#ff5b5b;
+  --purple:#e75cff;
+}
+
+.red {
+  --bgc:var(--red);
+  --txc:white;
+  --semitrans:rgba(255,91,91,0.6);
+}
+
+.green {
+  --bgc:var(--green);
+  --txc:black;
+  --semitrans:rgba(55,255,184,0.6);
+}
+
+.purple {
+  --bgc:var(--purple);
+  --txc:white;
+  --semitrans:rgba(231,92,255,0.6)
+}
+
+.btn {
+  font-size:22px;
+  display:inline-block;
+  padding:11px;
+  border-radius:4px;
+  text-decoration: none;
+  transition:.3s;
+}
+
+.btn.solid {
+  background-color:var(--bgc);
+  color:var(--txc);
+  border:4px solid var(--bgc);
+}
+
+.btn.outline {
+  background-color:none;
+  color:var(--bgc);
+  border:4px solid var(--bgc);
+}
+
+.btn.outline:hover {
+  background-color:var(--bgc);
+  color:var(--txc);
+}
+
+.btn.solid:hover {
+  background-color:var(--semitrans);
+  color:var(--txc);
+
+}
+
+.header {
+  font-family:Quicksand, sans-serif;
+  grid-column: span 4 / auto;
+  align-self: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows:240px;
+  width: 50%;
+  margin: 0 25%;
+  gap:1rem;
+}
+
+.banner {
+  grid-column: span 2 / auto;
+  border:1px solid black;
+  background-color:white;
+  padding:5%;
+}
+
+.footer {
+  grid-column: span 4 / auto;
+  background-color:white;
+  border:1px solid black;
+}
+
+@media only screen and (max-width: 800px) {
+  .grid-container {
+    width:90%;
+    margin: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .grid-container {
+    width:90%;
+    margin: 0 5%;
+  }
+  .banner {
+    grid-column: span 4 / auto;
+  }
+}
